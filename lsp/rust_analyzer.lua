@@ -1,0 +1,42 @@
+return {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  settings = {
+    ['rust-analyzer'] = {
+      procMacro = { enable = true },
+      cargo = { allFeatures = true },
+      completion = {
+        autoimport = { enable = true },
+      },
+    },
+  },
+  capabilities = {
+    textDocument = {
+      completion = {
+        completionItem = {
+          commitCharactersSupport = false,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          insertReplaceSupport = true,
+          insertTextModeSupport = {
+            valueSet = { 1 }
+          },
+          labelDetailsSupport = true,
+          preselectSupport = false,
+          resolveSupport = {
+            properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionList = {
+          itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = true,
+        insertTextMode = 1
+      }
+    }
+  }
+}
