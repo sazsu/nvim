@@ -25,10 +25,10 @@ local new_bin = function(opts)
 
   local formatted_entry = string.format([=[
 
-[[bin]]
-name = "%s"
-path = "src/%s.rs"
-]=], new_bin_name, new_bin_name)
+  [[bin]]
+  name = "%s"
+  path = "src/%s.rs"
+  ]=], new_bin_name, new_bin_name)
   cargo_toml:write(formatted_entry)
   cargo_toml:close()
 
