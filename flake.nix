@@ -98,6 +98,7 @@
         };
         misc = with pkgs.vimPlugins; [
           indent-blankline-nvim
+          vim-wakatime
         ];
       };
       # shared libraries to be added to LD_LIBRARY_PATH

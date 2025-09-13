@@ -14,5 +14,6 @@ require('lze').load {
   { import = 'conf.plugins.gitsigns' },
   { import = 'conf.plugins.typst-preview' },
   { import = 'conf.plugins.indent-blankline' },
+  { import = 'conf.plugins.wakatime' },
 }
 require('conf.plugins.lsp')
