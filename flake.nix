@@ -26,18 +26,34 @@
       ...
     } @ packageDef: {
       lspsAndRuntimeDeps = {
-        lsps = with pkgs; [
-          lua-language-server
-          nixd
-          ruff
-          basedpyright
-          tinymist
-          rust-analyzer
-          clang-tools
-        ];
-        formatters = with pkgs; [
-          typstyle
-        ];
+        lsps = with pkgs; {
+          python = [
+            ruff
+            ty
+            basedpyright
+          ];
+          lua = [
+            lua-language-server
+          ];
+          typst = [
+            tinymist
+          ];
+          rust = [
+            rust-analyzer
+          ];
+          cpp = [
+            clang-tools
+          ];
+          nix = [
+            nixd
+            nil
+          ];
+        };
+        formatters = with pkgs; {
+          typst = [
+            typstyle
+          ];
+        };
       };
 
       startupPlugins = {

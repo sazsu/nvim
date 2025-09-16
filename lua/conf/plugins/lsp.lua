@@ -11,9 +11,11 @@ return {
     vim.lsp.inlay_hint.enable(true)
     vim.lsp.enable({
       'lua_ls',
+      'nil',
       'nixd',
       'ruff',
       'basedpyright',
+      'ty',
       'tinymist',
       'clangd',
       -- 'rust_analyzer',
