@@ -40,7 +40,9 @@ return {
       },
       sections = {
         lualine_a = { mode },
-        lualine_b = { 'filename', },
+        lualine_b = {
+          { 'filename', path = 1, }
+        },
         lualine_c = { lsp_clients, completion },
         lualine_x = { '%S' },
         lualine_y = { 'filetype' },
