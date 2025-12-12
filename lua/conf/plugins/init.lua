@@ -1,6 +1,3 @@
-local colorscheme = nixCats('colorscheme')
-vim.cmd.colorscheme(colorscheme)
-
 require('lze').load {
   { import = 'conf.plugins.lsp' },
   { import = 'conf.plugins.telescope' },
@@ -17,3 +14,18 @@ require('lze').load {
   { import = 'conf.plugins.wakatime' },
 }
 require('conf.plugins.lsp')
+
+require('catppuccin').setup({
+  styles = {
+    comments = { 'italic' },
+    miscs = {},
+  },
+  color_overrides = {
+    macchiato = {
+      base = '#000000',
+    },
+  },
+})
+
+local colorscheme = nixCats('colorscheme')
+vim.cmd.colorscheme(colorscheme)

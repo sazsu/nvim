@@ -15,10 +15,11 @@ return {
       'nixd',
       'ruff',
       'basedpyright',
-      'ty',
+      -- 'ty', # ERROR: inlay hints issues
       'tinymist',
       'clangd',
       -- 'rust_analyzer',
+      'jinja_lsp'
     })
   end,
 }

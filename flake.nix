@@ -48,6 +48,9 @@
             nixd
             nil
           ];
+          misc = [
+            jinja-lsp
+          ];
         };
         formatters = with pkgs; {
           typst = [

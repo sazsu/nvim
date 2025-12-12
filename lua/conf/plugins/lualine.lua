@@ -26,13 +26,12 @@ vim.o.showcmdloc = 'statusline'
 return {
   'lualine.nvim',
   event = { 'DeferredUIEnter', },
-  after = function (_)
+  after = function(_)
     require('lualine').setup({
       options = {
         component_separators = {},
         section_separators = {},
         theme = {},
-        -- theme = nixCats('colorscheme'),
         globalstatus = true,
         refresh = {
           statusline = 200,
@@ -41,7 +40,7 @@ return {
       sections = {
         lualine_a = { mode },
         lualine_b = {
-          { 'filename', path = 1, }
+          { 'filename', path = 4, }
         },
         lualine_c = { lsp_clients, completion },
         lualine_x = { '%S' },
@@ -49,7 +48,7 @@ return {
         lualine_z = { {
           'location',
           padding = 0,
-        }},
+        } },
       },
     })
   end,

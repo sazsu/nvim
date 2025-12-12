@@ -1,19 +1,23 @@
 return {
-	'nvim-treesitter',
+  'nvim-treesitter',
   event = 'DeferredUIEnter',
   load = function(name)
     vim.cmd.packadd(name)
     vim.cmd.packadd('nvim-treesitter-textobjects')
   end,
-	after = function(plugin)
-		require('nvim-treesitter.configs').setup {
-      highlight = { enable = true },
+  after = function(plugin)
+    require('nvim-treesitter.configs').setup {
+      highlight = {
+        enable = true,
+        disable = { 'htmldjango', 'html', 'jinja', 'jinja_inline', },
+        additional_vim_regex_highlighting = true,
+      },
       indent = { enable = true },
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<leader><space>',
-          node_incremental = '<leader><space>',
+          init_selection = '<leader>n',
+          node_incremental = '<leader>n',
           node_decremental = '<bs>',
         },
       },
@@ -54,5 +58,5 @@ return {
         },
       },
     }
-	end,
+  end,
 }
