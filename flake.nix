@@ -134,7 +134,7 @@
         settings = {
           suffix-path = true;
           suffix-LD = true;
-          wrapRc = false;
+          wrapRc = true;
           neovim-unwrapped = neovim-nightly-overlay.packages.${pkgs.system}.default;
         };
         categories = {
