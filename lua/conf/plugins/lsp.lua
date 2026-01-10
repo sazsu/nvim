@@ -15,7 +15,7 @@ return {
       'nixd',
       'ruff',
       'basedpyright',
-      'ty',
+      -- 'ty',
       'tinymist',
       'clangd',
       -- 'rust_analyzer',

@@ -6,7 +6,7 @@ return {
     vim.cmd.packadd('nvim-treesitter-textobjects')
   end,
   after = function(plugin)
-    require('nvim-treesitter.configs').setup {
+    require('nvim-treesitter').setup {
       highlight = {
         enable = true,
         disable = { 'htmldjango', 'html', 'jinja', 'jinja_inline', },
