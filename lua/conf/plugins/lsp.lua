@@ -15,7 +15,7 @@ return {
       'nixd',
       'ruff',
       'basedpyright',
-      -- 'ty', # ERROR: inlay hints issues
+      'ty',
       'tinymist',
       'clangd',
       -- 'rust_analyzer',
