@@ -19,7 +19,8 @@ return {
       'tinymist',
       'clangd',
       -- 'rust_analyzer',
-      'jinja_lsp'
+      'jinja_lsp',
+      'ts_ls',
     })
   end,
 }

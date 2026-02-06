@@ -51,6 +51,9 @@
           misc = [
             jinja-lsp
           ];
+          js-ts = [
+            typescript-language-server
+          ];
         };
         formatters = with pkgs; {
           typst = [
@@ -134,7 +137,7 @@
         settings = {
           suffix-path = true;
           suffix-LD = true;
-          wrapRc = true;
+          wrapRc = false;
           neovim-unwrapped = neovim-nightly-overlay.packages.${pkgs.system}.default;
         };
         categories = {
