@@ -5,7 +5,6 @@ require('lze').load {
   { import = 'conf.plugins.blink' },
   { import = 'conf.plugins.yazi' },
   { import = 'conf.plugins.mini' },
-  { import = 'conf.plugins.treesitter' },
   { import = 'conf.plugins.rustaceanvim' },
   { import = 'conf.plugins.lualine' },
   { import = 'conf.plugins.gitsigns' },
@@ -14,6 +13,7 @@ require('lze').load {
   { import = 'conf.plugins.wakatime' },
 }
 require('conf.plugins.lsp')
+require('conf.plugins.treesitter')
 
 require('catppuccin').setup({
   styles = {
