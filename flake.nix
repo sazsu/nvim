@@ -72,8 +72,6 @@
         general = with pkgs.vimPlugins; {
           themes = [
             catppuccin-nvim
-            bamboo-nvim
-            kanagawa-nvim
             gruvbox-nvim
           ];
         };
