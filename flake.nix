@@ -59,6 +59,9 @@
           typst = [
             typstyle
           ];
+          nix = [
+            alejandra
+          ];
         };
       };
 
