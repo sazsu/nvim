@@ -2,6 +2,7 @@ return {
   {
     'mini.pairs',
     event = 'InsertEnter',
+    enabled = false,
     after = function (_)
       require('mini.pairs').setup {
         mappings = {

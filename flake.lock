@@ -104,11 +104,28 @@
         "type": "github"
       }
     },
+    "plugins-nvim-autopairs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778204579,
+        "narHash": "sha256-klOJgBPw8oGDnF9wKIpGDzuBY+tH1acRyvZSPR4wrjw=",
+        "owner": "windwp",
+        "repo": "nvim-autopairs",
+        "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
+        "type": "github"
+      },
+      "original": {
+        "owner": "windwp",
+        "repo": "nvim-autopairs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "plugins-nvim-autopairs": "plugins-nvim-autopairs"
       }
     }
   },

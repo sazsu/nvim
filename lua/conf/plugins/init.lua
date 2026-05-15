@@ -11,6 +11,7 @@ require('lze').load {
   { import = 'conf.plugins.typst-preview' },
   { import = 'conf.plugins.indent-blankline' },
   { import = 'conf.plugins.wakatime' },
+  { import = 'conf.plugins.auto-pairs' },
 }
 require('conf.plugins.lsp')
 require('conf.plugins.treesitter')

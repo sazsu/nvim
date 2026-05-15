@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    "plugins-nvim-autopairs" = {
+      url = "github:windwp/nvim-autopairs";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -21,10 +25,7 @@
     ];
     extra_pkg_config = {};
 
-    categoryDefinitions = {
-      pkgs,
-      ...
-    } @ packageDef: {
+    categoryDefinitions = {pkgs, ...} @ packageDef: {
       lspsAndRuntimeDeps = {
         lsps = with pkgs; {
           python = [
@@ -96,6 +97,9 @@
             blink = [
               blink-cmp
             ];
+            misc = [
+              pkgs.neovimPlugins."nvim-autopairs"
+            ];
           };
           snippets = {
             luasnip = pkgs.vimPlugins.luasnip;
@@ -131,10 +135,7 @@
     };
 
     packageDefinitions = {
-      nvim = {
-        pkgs,
-        ...
-      }: {
+      nvim = {pkgs, ...}: {
         settings = {
           suffix-path = true;
           suffix-LD = true;
@@ -179,7 +180,6 @@
       # this will make a package out of each of the packageDefinitions defined above
       # and set the default package to the one passed in here.
       packages = utils.mkAllWithDefault defaultPackage;
-
     })
     // (let
       # we also export a nixos module to allow reconfiguration from configuration.nix
