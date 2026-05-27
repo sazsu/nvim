@@ -1,4 +1,0 @@
--- vim.api.nvim_create_autocmd('FileType', {
---   pattern = { 'javascript', 'javascriptreact' },
---   callback = function(args) vim.treesitter.start(args.buf) end,
--- })

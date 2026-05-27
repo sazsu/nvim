@@ -14,7 +14,6 @@ require('lze').load {
   { import = 'conf.plugins.auto-pairs' },
 }
 require('conf.plugins.lsp')
-require('conf.plugins.treesitter')
 
 require('catppuccin').setup({
   styles = {
