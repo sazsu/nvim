@@ -7,7 +7,7 @@ return {
     'LspStop',
     'LspRestart',
   },
-  after = function (_)
+  after = function(_)
     vim.lsp.inlay_hint.enable(true)
     vim.lsp.enable({
       'lua_ls',
@@ -21,6 +21,7 @@ return {
       -- 'rust_analyzer',
       'jinja_lsp',
       'ts_ls',
+      'gopls',
     })
   end,
 }

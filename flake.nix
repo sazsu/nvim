@@ -55,6 +55,9 @@
           js-ts = [
             typescript-language-server
           ];
+          go = [
+            gopls
+          ];
         };
         formatters = with pkgs; {
           typst = [
