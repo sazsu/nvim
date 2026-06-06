@@ -27,6 +27,11 @@
 
     categoryDefinitions = {pkgs, ...} @ packageDef: {
       lspsAndRuntimeDeps = {
+        langs = with pkgs; {
+          go = [
+            go
+          ];
+        };
         lsps = with pkgs; {
           python = [
             ruff
@@ -146,6 +151,7 @@
           neovim-unwrapped = neovim-nightly-overlay.packages.${pkgs.system}.default;
         };
         categories = {
+          langs = true;
           lsps = true;
           formatters = true;
           base = true;
