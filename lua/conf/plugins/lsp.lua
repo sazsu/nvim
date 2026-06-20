@@ -22,6 +22,7 @@ return {
       'jinja_lsp',
       'ts_ls',
       'gopls',
+      'tofu_ls'
     })
   end,
 }

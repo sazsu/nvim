@@ -63,6 +63,9 @@
           go = [
             gopls
           ];
+          opentofu = [
+            opentofu-ls
+          ];
         };
         formatters = with pkgs; {
           typst = [
