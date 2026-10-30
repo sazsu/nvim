@@ -8,7 +8,7 @@ return {
         expr = '(builtins.getFlake "/Users/em/dotfiles").inputs.nixpkgs',
       },
       formatting = {
-        command = { 'nix', 'fmt' },
+        command = { 'nixfmt' },
       },
       options = {
         darwin = {

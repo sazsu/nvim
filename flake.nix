@@ -72,7 +72,7 @@
             typstyle
           ];
           nix = [
-            alejandra
+            nixfmt
           ];
         };
       };
