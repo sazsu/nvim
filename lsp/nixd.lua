@@ -4,16 +4,18 @@ return {
   root_markers = { 'flake.nix', 'flake.lock' },
   settings = {
     nixd = {
-      nixpkgs = 'import <nixpkgs> {}',
+      nixpkgs = {
+        expr = '(builtins.getFlake "/Users/em/dotfiles").inputs.nixpkgs',
+      },
       formatting = {
-        command = { 'alejandra', },
+        command = { 'nix', 'fmt' },
       },
       options = {
         darwin = {
-          expr = '(builtins.getFlake (toString ./.).darwinConfigurations.zephyr.options)',
+          expr = '(builtins.getFlake "/Users/em/dotfiles").darwinConfigurations.zephyr.options',
         },
         home_manager = {
-          expr = '(builtins.getFlake (toString ./.).homeConfigurations."em@zephyr".options)',
+          expr = '(builtins.getFlake "/Users/em/dotfiles").homeConfigurations."em@zephyr".options)',
         },
       },
     },
